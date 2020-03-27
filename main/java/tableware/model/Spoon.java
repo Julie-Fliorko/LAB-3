@@ -8,4 +8,12 @@ public class Spoon extends AbstractTableware{
 				type, price);
 		this.heandleLengthInCm = heandleLengthInCm;
 	}
+	
+	public String getHeaders() {
+		return super.getHeaders() + ", heandleLengthInCm";
+	}
+	
+	public String toCSV() {
+		return super.toCSV() + ", heandleLengthInCm: " + heandleLengthInCm;
+	}
 }

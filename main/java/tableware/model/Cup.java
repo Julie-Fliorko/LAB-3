@@ -18,5 +18,11 @@ public class Cup extends AbstractTableware{
 		this.heandlesType = heandlesType;
 	}
 	
+	public String getHeaders() {
+		return super.getHeaders() + ", " + "heandlesType";
+	}
 	
+	public String toCSV() {
+		return super.toCSV() + ", heandlesType: " + heandlesType;
+	}
 }

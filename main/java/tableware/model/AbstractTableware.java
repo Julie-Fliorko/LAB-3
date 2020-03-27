@@ -12,7 +12,7 @@ public abstract class AbstractTableware {
 	protected String dessignedFor;
 	protected String material;
 	protected String tablewareType;
-	//public TablewareType tablewareType;
+	// public TablewareType tablewareType;
 	protected float price;
 
 	AbstractTableware(long garanteeInDays, String style, HowToWash howToWash, int weightInGrams,
@@ -31,7 +31,6 @@ public abstract class AbstractTableware {
 		this.abilityToMicrowave = abilityToMicrowave;
 		this.howToWash = howToWash;
 	}
-
 
 	public long getGaranteeInDays() {
 		return garanteeInDays;
@@ -119,5 +118,18 @@ public abstract class AbstractTableware {
 
 	public void setPrice(float price) {
 		this.price = price;
+	}
+
+	public String getHeaders() {
+		return "garanteeInDays, weightInGrams, abilityToMicrowave, manufacturer, colour, dessignedFor,"
+				+ " material, howToWash, tablewareType, price ";
+
+	}
+	
+	public String toCSV() {
+		return "GaranteeInDays: " + garanteeInDays + ", weightInGrams: " + weightInGrams + ", abilityToMicrowave: " + 
+	", manufacturer: " + manufacturer + ", colour: " + colour + ", dessignedFor: " + dessignedFor + ", material: " + material
+	+ ", howToWash: " + howToWash + ", tablewareType: " + tablewareType + ", price" + price;
+		
 	}
 }

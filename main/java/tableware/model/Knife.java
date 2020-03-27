@@ -33,4 +33,13 @@ public class Knife extends AbstractTableware{
 	public void setBladeLeangthInCm(float bladeLeangthInCm) {
 		this.bladeLeangthInCm = bladeLeangthInCm;
 	}
+	
+	public String getHeaders() {
+		return super.getHeaders() + ", bladeType, sharpness, bladeLeangthInCm" ;
+	}
+	
+	public String toCSV() {
+		return super.toCSV() + ", bladeType: " + bladeType + ", sharpness: " + sharpness
+				+ ", bladeLeangthInCm: ";
+	}
 }

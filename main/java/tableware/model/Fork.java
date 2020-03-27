@@ -9,4 +9,11 @@ public class Fork extends AbstractTableware{
 		this.heandleLengthInCm = heandleLengthInCm;
 	}
 	
+	public String getHeaders() {
+		return super.getHeaders() + ", heandleLengthInCm";
+	}
+	
+	public String toCSV() {
+		return super.toCSV() + ", heandleLengthInCm: " + heandleLengthInCm;
+	}
 }

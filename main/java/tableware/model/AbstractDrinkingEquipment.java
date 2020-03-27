@@ -23,4 +23,12 @@ public abstract class AbstractDrinkingEquipment extends AbstractTableware{
 	public void setDiameterInCm(float diameterInCm) {
 		this.diameterInCm = diameterInCm;
 	}	
+	
+	public String getHeaders() {
+		return super.getHeaders() + "," + "sizeInMl, diameterInCm";
+	}
+	
+	public String toCSV() {
+		return super.toCSV() + ", sizeInMl: " + sizeInMl + ", diameterInCm: " + diameterInCm;
+	}
 }
