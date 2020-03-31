@@ -8,20 +8,20 @@ import org.junit.Test;
 public class TablewareManagerTest extends BaseTablewareManagerTest{
 
 	
-private TablewareManager tablewareManager;
+	private TablewareManager tablewareManager;
 	
-@Before //same as BeforeEach
-public void setUp() {
-	tablewareManager = new TablewareManager();
-	tablewareManager.addTableware(tableware);
-}
-
-@Test
-public void testFindTablewareByType() {
-	String tablewareType = "Plate";
-	tableware = tablewareManager.findTablewareBy(tablewareType );
-		assertEquals("Plate", tableware.get(0).getTablewareType());
-		assertEquals("Plate", tableware.get(1).getTablewareType());
-		assertEquals(2, tableware.size());
-}
+	@Before //same as BeforeEach
+	public void setUp() {
+		tablewareManager = new TablewareManager();
+		tablewareManager.addTableware(tableware);
+	}
+	
+	@Test
+	public void testFindTablewareByType() {
+		String tablewareType = "Plate";
+		tableware = tablewareManager.findTablewareBy(tablewareType );
+			assertEquals("Plate", tableware.get(0).getTablewareType());
+			assertEquals("Plate", tableware.get(1).getTablewareType());
+			assertEquals(2, tableware.size());
+	}
 }
